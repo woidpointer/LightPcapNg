@@ -55,8 +55,7 @@ option(LIGHT_USE_ZSTD "Compile with ZSTD support" ON)
 
 if(LIGHT_USE_ZSTD)
     # Try to find zstd in the cmake search path
-    #find_package(zstd QUIET)
-    find_package(zstd)
+    find_package(zstd QUIET)
     if (zstd_FOUND)
         # zstd was already found, so we don't resolve our dependency by ourself
         # Check if dependency was resolved by conan (find_package generator)
